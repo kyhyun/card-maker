@@ -1,6 +1,4 @@
-@value makerGreen from '/src/common/colors.css';
-@value makerWhite from '/src/common/colors.css';
-@value makerBlack from '/src/common/colors.css';
+@value makerGreen, makerWhite, makerBlack from '/src/common/colors.css';
 
 .header {
   position: relative;
