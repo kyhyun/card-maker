@@ -1,0 +1,45 @@
+@value makerBlack, mekrWhite from '/src/common/colors.css';
+
+.form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  border-top: 1px solid makerBlack;
+  border-left: 1px solid makerBlack;
+}
+
+.input,
+.textarea,
+.button,
+.select,
+.fileInput {
+  font-size: 0.8rem;
+  width: 100%;
+  border: 0;
+  padding: 0.5em;
+  border-bottom: 1px solid makerBlack;
+  border-right: 1px solid makerBlack;
+  background: makerWhite;
+}
+
+.input,
+.select {
+  flex: 1 1 30%;
+}
+
+.input:focus,
+.textarea:focus,
+.selec:focus,
+.button:focus {
+  outline: 0;
+}
+
+.fileInput {
+  flex: 1 1 50%;
+  padding: 0;
+}
+
+.textarea {
+  flex-basis: 100%;
+}
