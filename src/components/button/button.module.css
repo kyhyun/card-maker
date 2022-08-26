@@ -1,10 +1,13 @@
 @value makerWhite, makerGreen from '/src/common/colors.css';
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 50%;
   background-color: makerGreen;
   color: makerWhite;
   font-weight: bold;
   padding: 0.5em;
-  flex: 1 1 50%;
   font-size: 0.8rem;
 }
