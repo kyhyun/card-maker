@@ -3,6 +3,7 @@
 .editor {
   flex: 1 1 50%;
   border-right: 1px solid makerLightGrey;
+  overflow-y: auto;
 }
 
 .title {
