@@ -19,7 +19,8 @@ const Maker = ({ authService, FileInput, cardRepository }) => {
 
   // async 사용자가 로그인 된 경우 해당 id의 데이터를 계속 유지하기 위해 추적할 수 있도록 처리
   useEffect(() => {
-    if (!userId) { // 사용자 아이디가 없다면 그대로 빈 값 반환
+    if (!userId) {
+      // 사용자 아이디가 없다면 그대로 빈 값 반환
       return;
     }
     const stopSync = cardRepository.syncCards(userId, (cards) => {
@@ -28,7 +29,7 @@ const Maker = ({ authService, FileInput, cardRepository }) => {
     return () => stopSync();
 
     // 데이터가 업데이트 될 때마다, 2번째 인자의 콜백 함수를 계속 호출해서 카드의 컴포넌트를 업데이트 해준다.
-  }, [userId]);
+  }, [userId, cardRepository]);
 
   // 사용자 카드가 업데이트 될 때마다, 사용자 id를 이용해서 카드가 사용자 아이디 별로 생성될 수 있도록 처리해야함
   // 로그인을 할 때 history에 id를 전달
@@ -43,7 +44,7 @@ const Maker = ({ authService, FileInput, cardRepository }) => {
         navigate('/');
       }
     });
-  });
+  }, [authService, navigate]);
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
